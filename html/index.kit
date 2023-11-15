@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Forest</title>
+		<!-- @include 'styles.kit' -->
+		<style>
+			html {
+				scroll-behavior: smooth;
+				scroll-snap-type: y proximity;
+				scroll-padding-top: 120px;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- @include 'nav.kit' -->
+		<header id="home" class="section">
+			<div class="hero-img">
+				<div class="hero-img__shadow"></div>
+				<div class="hero-img__text wrapper">
+					<p>Forest Group</p>
+					<h2>Najpiękniejszy park w Twojej okolicy!</h2>
+				</div>
+			</div>
+		</header>
+
+		<main>
+			<section id="aboutus" class="aboutus white-section section">
+				<h1>O NAS</h1>
+				<div class="aboutus__box wrapper">
+					<div class="aboutus__box-image"></div>
+					<div class="aboutus__box-text">
+						<h2 class="aboutus__box-text--title">Niezapomniane przygody</h2>
+						<p class="aboutus__box-text--content">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
+							commodi praesentium maxime adipisci sed eveniet quis, earum
+							assumenda asperiores exercitationem nisi sint accusamus nam rem
+							dolore.Similique commodi praesentium maxime adipisci sed eveniet
+							quis, earum assumenda asperiores exercitationem nisi sint
+							accusamus nam rem dolore.
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<div id="image">
+				<div class="image-img">
+					<div class="image-img--shadow"></div>
+					<div class="image-img--text wrapper">
+						<h2>Przygoda dla całej rodziny</h2>
+					</div>
+				</div>
+			</div>
+
+			<section id="offers" class="offers white-section section">
+				<h1>OFERTA</h1>
+				<p>Wybierz jedną z naszych wspaniałych ofert!</p>
+				<div class="offers-box">
+					<div class="offers-box__card">
+						<h3>Demo</h3>
+						<p class="price">$0</p>
+						<ul>
+							<li class="offers-box green">opcja w pakiecie</li>
+							<li class="offers-box green">opcja w pakiecie</li>
+							<li class="grey">opcja poza pakietem</li>
+							<li class="grey">opcja poza pakietem</li>
+							<li class="grey">opcja poza pakietem</li>
+						</ul>
+						<button>Wybierz</button>
+					</div>
+					<div class="offers-box__card">
+						<h3>Standart</h3>
+						<p class="price">$99</p>
+						<ul>
+							<li class="offers-box green">opcja w pakiecie</li>
+							<li class="offers-box green">opcja w pakiecie</li>
+							<li class="offers-box green">opcja w pakiecie</li>
+							<li class="grey">opcja poza pakietem</li>
+							<li class="grey">opcja poza pakietem</li>
+						</ul>
+						<button class="button__choosen">Wybierz</button>
+					</div>
+					<div class="offers-box__card">
+						<h3>Premium</h3>
+						<p class="price">$299</p>
+						<ul class="center">
+							<li class="offers-box green">opcja w pakiecie</li>
+							<li class="offers-box--center green">opcja w pakiecie</li>
+							<li class="offers-box--center green">opcja w pakiecie</li>
+							<li class="offers-box--center green">opcja w pakiecie</li>
+							<li class="offers-box--center green">opcja w pakiecie</li>
+						</ul>
+						<button>Wybierz</button>
+					</div>
+				</div>
+			</section>
+		</main>
+		<!-- @include 'footer.kit' -->
+		<script src="/dist/js/main.min.js"></script>
+		<script src="https://unpkg.com/@sidsbrmnn/scrollspy@1.x/dist/scrollspy.min.js"></script>
+		<script src="/dist/js/scrollspy.min.js"></script>
+	</body>
+</html>

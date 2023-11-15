@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Forest</title>
+		<!-- @include 'styles.kit' -->
+	</head>
+	<body class="section dark-section">
+		<div class="contact__template">
+			<nav class="nav" id="navId">
+				<button class="burger-btn">
+					<div class="burger-btn__box">
+						<div class="burger-btn__bars"></div>
+					</div>
+				</button>
+				<div class="nav-mobile">
+					<div class="nav-mobile__items">
+						<a href="index.html#home" class="nav-mobile__item">Home</a>
+						<a href="index.html#aboutus" class="nav-mobile__item">O nas</a>
+						<a href="index.html#offers" class="nav-mobile__item">Oferta</a>
+						<a href="contact.html" class="nav-mobile__item">Kontakt</a>
+					</div>
+				</div>
+			
+				<div class="nav-desktop wrapper">
+					<div href="index.html" class="nav-desktop__logo logo">
+						<div><i class="fa-solid fa-tree"></i> Forest</div>
+					</div>
+					<div class="nav-desktop__items">
+						<a href="index.html#home" class="nav-desktop__item">Home</a>
+						<a href="index.html#aboutus" class="nav-desktop__item">O nas</a>
+						<a href="index.html#offers" class="nav-desktop__item">Oferta</a>
+						<a href="contact.html#contact" class="nav-desktop__item active">Kontakt</a>
+					</div>
+				</div>
+			</nav>
+		<h1>KONTAKT</h1>
+		<div class="contact__box wrapper">
+			<div class="contact section white-section">
+				<form action="" class="contact__form">
+					<div class="contact__form-top">
+						<label for="name" class="contact__form-label">Imię </label>
+						<input type="text" class="contact__form-input" id="name" placeholder="Imię" />
+	
+						<label for="email" class="contact__form-label"
+							>Adres e-mail
+						</label>
+						<input type="text" class="contact__form-input" id="email" placeholder="Adres e-mail"/>
+					</div>
+	
+					<label for="msg" class="contact__form-label">Wiadomość </label>
+					<textarea class="contact__form-textarea" id="msg" placeholder="Wiadomość"></textarea>
+	
+					<button type="submit" class="contact__form-btn btn-special-animation">
+						Wyślij
+					</button>
+				</form>
+			</div>
+			<div class="contact__map">
+				<div class="contact__map--title">Lokalizacja</div>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50757.02283106378!2d20.365130547315243!3d49.42821923662643!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473e03bc856f1d25%3A0xbb768bda4e2d12c7!2sPieni%C5%84ski%20Park%20Narodowy!5e0!3m2!1sen!2spl!4v1699956982397!5m2!1sen!2spl" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
+		</div>
+		<!-- @include 'footer.kit' -->
+		</div>
+
+		<script src="/dist/js/main.min.js"></script>
+	</body>
+</html>

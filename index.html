@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Forest</title>
+		<script
+	src="https://kit.fontawesome.com/03a2e08ba1.js"
+	crossorigin="anonymous"
+></script>
+<link rel="stylesheet" href="/dist/css/style.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+	href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;800&display=swap"
+	rel="stylesheet"
+/>
+
+		<style>
+			html {
+				scroll-behavior: smooth;
+				scroll-snap-type: y proximity;
+				scroll-padding-top: 120px;
+			}
+		</style>
+	</head>
+	<body>
+		<nav class="nav" id="navId">
+	<button class="burger-btn">
+		<div class="burger-btn__box">
+			<div class="burger-btn__bars"></div>
+		</div>
+	</button>
+	<div class="nav-mobile">
+		<div class="nav-mobile__items">
+			<a href="index.html#home" class="nav-mobile__item">Home</a>
+			<a href="index.html#aboutus" class="nav-mobile__item">O nas</a>
+			<a href="index.html#offers" class="nav-mobile__item">Oferta</a>
+			<a href="contact.html" class="nav-mobile__item">Kontakt</a>
+		</div>
+	</div>
+
+	<div class="nav-desktop wrapper">
+		<div href="index.html" class="nav-desktop__logo logo">
+			<div><i class="fa-solid fa-tree"></i> Forest</div>
+		</div>
+		<div class="nav-desktop__items">
+			<a href="#home" class="nav-desktop__item active">Home</a>
+			<a href="#aboutus" class="nav-desktop__item">O nas</a>
+			<a href="#offers" class="nav-desktop__item">Oferta</a>
+			<a href="contact.html#contact" class="nav-desktop__item">Kontakt</a>
+		</div>
+	</div>
+</nav>
+		<header id="home" class="section">
+			<div class="hero-img">
+				<div class="hero-img__shadow"></div>
+				<div class="hero-img__text wrapper">
+					<p>Forest Group</p>
+					<h2>Najpiękniejszy park w Twojej okolicy!</h2>
+				</div>
+			</div>
+		</header>
+
+		<main>
+			<section id="aboutus" class="aboutus white-section section">
+				<h1>O NAS</h1>
+				<div class="aboutus__box wrapper">
+					<div class="aboutus__box-image"></div>
+					<div class="aboutus__box-text">
+						<h2 class="aboutus__box-text--title">Niezapomniane przygody</h2>
+						<p class="aboutus__box-text--content">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
+							commodi praesentium maxime adipisci sed eveniet quis, earum
+							assumenda asperiores exercitationem nisi sint accusamus nam rem
+							dolore.Similique commodi praesentium maxime adipisci sed eveniet
+							quis, earum assumenda asperiores exercitationem nisi sint
+							accusamus nam rem dolore.
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<div id="image">
+				<div class="image-img">
+					<div class="image-img--shadow"></div>
+					<div class="image-img--text wrapper">
+						<h2>Przygoda dla całej rodziny</h2>
+					</div>
+				</div>
+			</div>
+
+			<section id="offers" class="offers white-section section">
+				<h1>OFERTA</h1>
+				<p>Wybierz jedną z naszych wspaniałych ofert!</p>
+				<div class="offers-box">
+					<div class="offers-box__card">
+						<h3>Demo</h3>
+						<p class="price">$0</p>
+						<ul>
+							<li class="offers-box green">opcja w pakiecie</li>
+							<li class="offers-box green">opcja w pakiecie</li>
+							<li class="grey">opcja poza pakietem</li>
+							<li class="grey">opcja poza pakietem</li>
+							<li class="grey">opcja poza pakietem</li>
+						</ul>
+						<button>Wybierz</button>
+					</div>
+					<div class="offers-box__card">
+						<h3>Standart</h3>
+						<p class="price">$99</p>
+						<ul>
+							<li class="offers-box green">opcja w pakiecie</li>
+							<li class="offers-box green">opcja w pakiecie</li>
+							<li class="offers-box green">opcja w pakiecie</li>
+							<li class="grey">opcja poza pakietem</li>
+							<li class="grey">opcja poza pakietem</li>
+						</ul>
+						<button class="button__choosen">Wybierz</button>
+					</div>
+					<div class="offers-box__card">
+						<h3>Premium</h3>
+						<p class="price">$299</p>
+						<ul class="center">
+							<li class="offers-box green">opcja w pakiecie</li>
+							<li class="offers-box--center green">opcja w pakiecie</li>
+							<li class="offers-box--center green">opcja w pakiecie</li>
+							<li class="offers-box--center green">opcja w pakiecie</li>
+							<li class="offers-box--center green">opcja w pakiecie</li>
+						</ul>
+						<button>Wybierz</button>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer id="footer" class="footer section white-section">
+	<div class="part__boxes wrapper">
+		<div class="part__one">
+			<div class="logo"><i class="fa-solid fa-tree"></i> Forest</div>
+		</div>
+		<div class="part__box">
+			<div class="part part__two">
+				<h4>O nas</h4>
+				<p>Historia</p>
+				<p>Parki</p>
+				<p>Opinie</p>
+			</div>
+			<div class="part part__three">
+				<h4>Nasza firma</h4>
+				<p>Praca</p>
+				<p>Kadry</p>
+				<p>Zarząd</p>
+			</div>
+			<div class="part part__four">
+				<h4>Dokumenty</h4>
+				<p>Wnioski</p>
+				<p>Rezerwacje</p>
+			</div>
+		</div>
+		
+	</div>
+	<div class="part__last">
+		<p>&copy;<span class="year"></span> Forest Group Company Ltd.</p>
+	</div>
+</footer>
+
+		<script src="/dist/js/main.min.js"></script>
+		<script src="https://unpkg.com/@sidsbrmnn/scrollspy@1.x/dist/scrollspy.min.js"></script>
+		<script src="/dist/js/scrollspy.min.js"></script>
+	</body>
+</html>

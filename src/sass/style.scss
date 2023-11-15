@@ -1,0 +1,578 @@
+@import './colors';
+@import './mixin';
+
+*,
+::after,
+::before {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background-color: $background;
+	font-family: 'Inter', sans-serif;
+	font-size: 1rem;
+}
+
+section {
+	margin-bottom: 3em;
+	margin-top: 2em;
+}
+
+h1 {
+	display: block;
+	text-align: center;
+	font-weight: 200;
+	padding: 1em;
+}
+
+a {
+	text-decoration: none;
+}
+
+.wrapper {
+	margin: 0 auto;
+	max-width: 1200px;
+	width: 100%;
+}
+
+.logo {
+	color: $textLogo;
+	cursor: pointer;
+}
+
+//NAV MOBILE, with MEDIA QUERIES
+@media (max-width: 768px) {
+	html, body {
+		overflow-x: hidden;
+	}
+	
+	.nav-desktop {
+		display: none;
+	}
+	.burger-btn {
+		position: fixed;
+		top: 1em;
+		right: 20px;
+		padding: 1em;
+		background: none;
+		border: 1px solid transparent;
+		cursor: pointer;
+		z-index: 1000;
+
+		&:focus {
+			outline: none;
+			border: 1px solid rgba(255, 255, 255, 0.5);
+			border-radius: 8px;
+		}
+
+		&__box {
+			position: relative;
+			width: 40px;
+			height: 30px;
+		}
+
+		&__bars,
+		&__bars::after,
+		&__bars::before {
+			position: absolute;
+			right: 0;
+			height: 3px;
+			content: '';
+			background-color: $textWhite;
+		}
+
+		&__bars {
+			width: 100%;
+			top: 3px;
+
+			&::after {
+				top: 13px;
+				width: 100%;
+			}
+
+			&::before {
+				top: 27px;
+				width: 100%;
+			}
+		}
+	}
+
+	.nav-mobile {
+		position: fixed;
+		top: 0;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		height: 100vh;
+		width: 100%;
+		transform: translateX(100%);
+		transition: 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
+		background-color: $hoverColor;
+		z-index: 100;
+
+		&--active {
+			transform: translateX(30%);
+		}
+
+		&__logo {
+			font-size: 2rem;
+			padding: 0.5em 0;
+		}
+
+		&__item {
+			position: relative;
+			display: block;
+			margin: 0.2em 0;
+			padding: 0.5em 2em;
+			font-size: 2rem;
+			color: #111;
+			text-decoration: none;
+			border-radius: 8px;
+			overflow: hidden;
+
+			&::before,
+			&::after {
+				display: block;
+				position: absolute;
+				content: '';
+				transition: all 0.5s;
+				z-index: -1;
+				width: 100%;
+				height: 100%;
+			}
+
+			&::before {
+				top: -100%;
+			}
+			&::after {
+				bottom: -100%;
+			}
+			&:hover::before {
+				top: -50%;
+				background-color: $hoverColor;
+			}
+			&:hover::after {
+				bottom: -50%;
+				background-color: $hoverColor;
+			}
+		}
+	}
+	@keyframes navItemsAnimation {
+		from {
+			transform: translateX(200%);
+		}
+
+		to {
+			transform: translateX(0);
+		}
+	}
+
+	.nav-items-animation {
+		animation: navItemsAnimation 1s both;
+	}
+}
+
+.black-bars-color,
+.black-bars-color::after,
+.black-bars-color::before {
+	background-color: $textLogo;
+}
+
+// NAV DESKTOP
+@media (min-width: 769px) {
+	.nav-mobile,
+	.burger-btn {
+		display: none;
+	}
+
+	.nav {
+		position: sticky;
+		top: 0;
+		z-index: 100;
+		background-color: #fff;
+
+		&-desktop {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 95%;
+
+			&__logo {
+				font-size: 1.8rem;
+				padding: 0.45em 0;
+			}
+
+			&__item {
+				color: #000;
+				font-size: 1.2rem;
+				padding: 1em;
+				transition: color 0.5s, background-color 0.5s;
+			}
+		}
+		.active {
+			background-color: #000;
+			color: #fff;
+		}
+	}
+}
+//HERO
+
+.hero-img {
+	position: relative;
+	display: flex;
+	background-image: url('/src/img/jungle-1807476_1920.jpg');
+	background-size: cover;
+	background-position: center;
+	align-items: center;
+	height: 30vh;
+
+	&__shadow {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.7);
+	}
+
+	&__text {
+		color: $textWhite;
+		z-index: 1;
+		text-align: left;
+		width: 80%;
+
+		p {
+			color: $textGrey;
+		}
+	}
+}
+
+.aboutus {
+	&__box {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: left;
+		height: auto;
+		width: 80%;
+
+		&-image {
+			width: 23em;
+			height: 16em;
+			background-image: url('/src/img/waters-3095682_640.jpg');
+			background-size: cover;
+			background-position: center;
+			margin: 1em 0;
+		}
+
+		&-text {
+			width: 23em;
+			margin: 1em 2em;
+			// margin-left: 2em;
+			line-height: 1.5em;
+			color: $textLogo;
+
+			&--title {
+				margin-bottom: 1em;
+				font-weight: bold;
+			}
+
+			&--content {
+				color: $textFooter;
+				text-align: justify;
+			}
+		}
+	}
+}
+
+.image {
+	&-img {
+		background-image: url('/src/img/girl-5785590_1920.jpg');
+		background-size: cover;
+		background-position: center;
+		height: 20vh;
+		position: relative;
+
+		&--shadow {
+			@include shadowImage;
+		}
+
+		&--text {
+			color: $textWhite;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			border: 1px solid #fff;
+			padding: 1em 4em;
+			width: 60%;
+			text-align: center;
+
+			h2 {
+				font-weight: 400;
+			}
+		}
+	}
+}
+
+.offers {
+	text-align: center;
+
+	p {
+		padding-bottom: 1em;
+	}
+
+	&-box {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+
+		&__card {
+			@include shadowCards;
+			margin: 0.8em;
+			padding: 1.2em;
+			width: 16em;
+			
+			ul {
+				list-style: none;
+				padding: 1em;
+				display: flex;
+				flex-direction: column;
+				justify-content: start;
+				align-items: flex-start;
+			}
+
+			.center {
+				align-items: center;
+			}
+			
+			.green::before {
+				content: '✔ ';
+				color: rgb(0, 219, 95);
+				padding-right: 0.4em;
+			}
+
+			li::before {
+				content: '- ';
+				color: $textGrey;
+				padding-right: 0.4em;
+			}
+
+			.grey {
+				color: $textGrey;
+			}
+
+			
+		}
+
+		button {
+			@include buttonStyle;
+			background-color: transparent;
+			box-shadow: 2px 2px 7px grey;
+		}
+
+		button:hover {
+			@include buttonColor;
+		}
+
+		.button__choosen {
+			@include buttonColor;
+		}
+
+		.button__choosen:hover {
+			@include buttonColorHover;
+		}
+
+		.price {
+			padding: 0.5em 0.5rem 0;
+			font-weight: 600;
+			font-size: 2.4rem;
+		}
+	}
+}
+
+//CONTACT
+.contact__template {
+	background: linear-gradient(0deg, rgba(114, 114, 114, 0.4), rgb(21, 21, 21)),
+		url('/src/img/jungle-1807476_1920.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.dark-section {
+	color: $textWhite;
+	width: 100%;
+}
+
+.contact__box {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 2em;
+}
+
+.contact {
+	margin: 1em;
+	padding: 2em;
+	width: 100%;
+
+	&__map {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		overflow: hidden;
+		padding: 2em;
+		margin: 1em;
+
+		&--title {
+			align-items: left;
+			padding-bottom: 1em;
+			text-transform: uppercase;
+		}
+	}
+
+	&__form,
+	&__form-top {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__form-label {
+		margin-bottom: 0.5em;
+		text-transform: uppercase;
+	}
+
+	&__form-input,
+	&__form-textarea {
+		margin-bottom: 2em;
+		padding: 0.6em 0;
+		font-size: 1.2rem;
+		background-color: transparent;
+		border: 0;
+		border-bottom: 2px solid #fff;
+		outline: 0;
+		color: $textWhite;
+	}
+
+	&__form-input:focus,
+	&__form-textarea:focus {
+		outline: transparent;
+	}
+
+	&__form-textarea {
+		max-width: 100%;
+		min-width: 100%;
+		width: 100%;
+		min-height: 150px;
+	}
+
+	&__form-btn {
+		align-self: flex-end;
+		width: 100%;
+		max-width: 200px;
+		@include buttonColor;
+		@include buttonStyle;
+	}
+
+	&__form-btn:hover {
+		@include buttonColorHover;
+	}
+}
+
+//FOOTER
+.footer {
+	background-color: $footerBGC;
+	color: $textLogo;
+	width: 100%;
+}
+
+.part__boxes {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+.part {
+	padding: 2em 1.5em;
+
+	&__box {
+		display: flex;
+		justify-content: space-around;
+	}
+
+	&__one {
+		font-size: 2.2em;
+		padding: 1em 0.5em;
+	}
+
+	&__two,
+	&__three,
+	&__four {
+		p {
+			padding-top: 1em;
+			cursor: pointer;
+		}
+	}
+
+	h4 {
+		font-weight: 800;
+	}
+
+	p {
+		color: $textFooter;
+	}
+}
+
+.part__last {
+	width: 100%;
+	text-align: center;
+	padding: 1em;
+	font-size: 0.7rem;
+	color: $textFooter;
+	border-top: 2px solid $textGrey;
+}
+
+//MEDIA
+@media (max-width: 768px) {
+	.hero-img {
+		height: 50vh;
+	}
+
+	.contact__template {
+		background: linear-gradient(0deg, rgba(114, 114, 114, 0.4), rgb(21, 21, 21)),
+			url('/src/img/jungle-1807476_640.jpg');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+
+	.image-img {
+		height: 30vh;
+		&--text {
+			padding: 1em 2em;
+		}
+	}
+	.contact {
+		width: 80%;
+	}
+
+	.aboutus__box {
+		&-text {
+			text-align: center;
+			margin: 1em 0;
+		}
+	}
+}
+
+@media (min-width: 756px) {
+	.contact {
+		width: 45%;
+	}
+
+	.contact__map {
+		width: 45%;
+	}
+}
