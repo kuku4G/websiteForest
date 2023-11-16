@@ -2,7 +2,7 @@ window.onload = function () {
     scrollSpy('nav', {
         sectionSelector: '.section',
         targetSelector: 'a',
-        offset: 200,
+        offset: 100,
         activeClass: 'active'
     });
 }

@@ -16,8 +16,8 @@ body {
 }
 
 section {
-	margin-bottom: 3em;
-	margin-top: 2em;
+	padding-bottom: 3em;
+	padding-top: 2em;
 }
 
 h1 {
@@ -347,7 +347,7 @@ a {
 			
 			.green::before {
 				content: '✔ ';
-				color: rgb(0, 219, 95);
+				color: $btnColor;
 				padding-right: 0.4em;
 			}
 
@@ -368,6 +368,7 @@ a {
 			@include buttonStyle;
 			background-color: transparent;
 			box-shadow: 2px 2px 7px grey;
+			color: $textLogo;
 		}
 
 		button:hover {
@@ -544,7 +545,7 @@ a {
 			url('../img/jungle_640.jpg');
 		background-size: cover;
 		background-position: center;
-		background-repeat: no-repeat;
+		// background-repeat: no-repeat;
 	}
 
 	.image-img {
