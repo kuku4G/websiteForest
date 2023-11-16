@@ -226,7 +226,7 @@ a {
 	background-size: cover;
 	background-position: center;
 	align-items: center;
-	height: 30vh;
+	height: 45vh;
 
 	&__shadow {
 		position: absolute;
@@ -259,7 +259,6 @@ a {
 		&-image {
 			width: 23em;
 			height: 16em;
-			background-image: url('../img/waters_640.jpg');
 			background-size: cover;
 			background-position: center;
 			margin: 1em 0;
@@ -268,7 +267,6 @@ a {
 		&-text {
 			width: 23em;
 			margin: 1em 2em;
-			// margin-left: 2em;
 			line-height: 1.5em;
 			color: $textLogo;
 
@@ -287,10 +285,10 @@ a {
 
 .image {
 	&-img {
-		background-image: url('../img/girl_1920.jpg');
+		background-image: url('/dist/img/girl_1920.jpg');
 		background-size: cover;
 		background-position: center;
-		height: 20vh;
+		height: 24vh;
 		position: relative;
 
 		&--shadow {
@@ -395,7 +393,7 @@ a {
 //CONTACT
 .contact__template {
 	background: linear-gradient(0deg, rgba(114, 114, 114, 0.4), rgb(21, 21, 21)),
-		url('../img/jungle_1920.jpg');
+		url('/dist/img/jungle_1920.jpg');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -543,7 +541,7 @@ a {
 
 	.contact__template {
 		background: linear-gradient(0deg, rgba(114, 114, 114, 0.4), rgb(21, 21, 21)),
-			url('../img/jungle_640.jpg');
+			url('/dist/img/jungle_640.jpg');
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
