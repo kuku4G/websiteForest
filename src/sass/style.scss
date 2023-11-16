@@ -222,7 +222,7 @@ a {
 .hero-img {
 	position: relative;
 	display: flex;
-	background-image: url('../img/jungle_1920.jpg');
+	background-image: url('dist/img/jungle_1920.jpg');
 	background-size: cover;
 	background-position: center;
 	align-items: center;
@@ -285,7 +285,7 @@ a {
 
 .image {
 	&-img {
-		background-image: url('/dist/img/girl_1920.jpg');
+		background-image: url('dist/img/girl_1920.jpg');
 		background-size: cover;
 		background-position: center;
 		height: 24vh;
@@ -393,7 +393,7 @@ a {
 //CONTACT
 .contact__template {
 	background: linear-gradient(0deg, rgba(114, 114, 114, 0.4), rgb(21, 21, 21)),
-		url('/dist/img/jungle_1920.jpg');
+		url('dist/img/jungle_1920.jpg');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -541,7 +541,7 @@ a {
 
 	.contact__template {
 		background: linear-gradient(0deg, rgba(114, 114, 114, 0.4), rgb(21, 21, 21)),
-			url('/dist/img/jungle_640.jpg');
+			url('dist/img/jungle_640.jpg');
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
