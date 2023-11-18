@@ -374,6 +374,7 @@ a {
 }
 .button__choosen {
 	@include buttonColor;
+	color: $textLogo;
 }
 
 .button:hover, .button__choosen:hover {
@@ -455,7 +456,6 @@ a {
 
 	.button__choosen {
 		align-self: flex-end;
-		width: 100%;
 		max-width: 200px;
 	}
 }
