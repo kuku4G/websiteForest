@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Forest</title>
+		<title>Forest Website</title>
 		<!-- @include 'styles.kit' -->
 	</head>
 	<body class="section dark-section">
@@ -24,9 +24,9 @@
 				</div>
 			
 				<div class="nav-desktop wrapper">
-					<div href="index.html" class="nav-desktop__logo logo">
+					<a href="index.html#home" class="nav-desktop__logo logo">
 						<div><i class="fa-solid fa-tree"></i> Forest</div>
-					</div>
+					</a>
 					<div class="nav-desktop__items">
 						<a href="index.html#home" class="nav-desktop__item">Home</a>
 						<a href="index.html#aboutus" class="nav-desktop__item">O nas</a>
@@ -37,24 +37,31 @@
 			</nav>
 		<h1>KONTAKT</h1>
 		<div class="contact__box wrapper">
-			<div class="contact section white-section">
+			<div class="contact section">
 				<form action="" class="contact__form">
 					<div class="contact__form-top">
 						<label for="name" class="contact__form-label">Imię </label>
-						<input type="text" class="contact__form-input" id="name" placeholder="Imię" />
+						<input type="text" class="contact__form-err contact__form-input" id="name" placeholder="Imię" />
+						<p class="error-text">Error</p>
 	
 						<label for="email" class="contact__form-label"
 							>Adres e-mail
 						</label>
-						<input type="text" class="contact__form-input" id="email" placeholder="Adres e-mail"/>
+						<input type="text" class="contact__form-err contact__form-input" id="email" placeholder="Adres e-mail"/>
+						<p class="error-text">Error</p>
 					</div>
 	
 					<label for="msg" class="contact__form-label">Wiadomość </label>
-					<textarea class="contact__form-textarea" id="msg" placeholder="Wiadomość"></textarea>
+					<textarea class="contact__form-err contact__form-textarea" id="msg" placeholder="Wiadomość"></textarea>
+					<p class="error-text">Error</p>
 	
-					<button type="submit" class="contact__form-btn btn-special-animation">
+					<button type="submit" class="button__choosen contact__form-btn">
 						Wyślij
 					</button>
+
+					<div class="popup">
+						<p>Wiadomość wysłana!</p>
+					</div>
 				</form>
 			</div>
 			<div class="contact__map">
@@ -66,5 +73,6 @@
 		</div>
 
 		<script src="./dist/js/main.min.js"></script>
+		<script src="./dist/js/error.min.js"></script>
 	</body>
 </html>

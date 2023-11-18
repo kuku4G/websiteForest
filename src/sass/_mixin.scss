@@ -1,15 +1,18 @@
 @mixin buttonColor {
 	background-color: rgb(0, 219, 95);
-	box-shadow: 2px 1px 6px rgb(0, 219, 95);
-	border: none;
+	box-shadow: 2px 1px 6px rgb(0, 126, 55);
 	border-radius: 6px;
+	border: none;
+	margin: 0.3em;
+	padding: 0.5em 3.5em;
 	cursor: pointer;
 	transition: all 0.5s;
 }
 
 @mixin buttonColorHover {
-	background-color: rgb(0, 202, 88);
-	box-shadow: 2px 1px 6px rgb(0, 202, 88);
+	background-color: rgb(18, 146, 74);
+	box-shadow: 2px 1px 6px rgb(0, 130, 56);
+	color: $textWhite;
 }
 
 @mixin buttonStyle {
@@ -19,6 +22,8 @@
 	padding: 0.5em 3.5em;
 	cursor: pointer;
 	transition: all 0.5s;
+	background-color: transparent;
+	box-shadow: 2px 2px 7px grey;
 }
 
 @mixin shadowCards {

@@ -39,7 +39,6 @@ a {
 
 .logo {
 	color: $textLogo;
-	cursor: pointer;
 }
 
 //NAV MOBILE, with MEDIA QUERIES
@@ -344,43 +343,20 @@ a {
 			.center {
 				align-items: center;
 			}
-			
-			.green::before {
-				content: '✔ ';
+
+			.fa-check {
 				color: $btnColor;
-				padding-right: 0.4em;
+				padding: .2em .4em .2em 0;
 			}
 
-			li::before {
-				content: '- ';
+			.fa-minus {
 				color: $textGrey;
-				padding-right: 0.4em;
+				padding: .2em .4em .2em 0;
 			}
 
 			.grey {
 				color: $textGrey;
 			}
-
-			
-		}
-
-		button {
-			@include buttonStyle;
-			background-color: transparent;
-			box-shadow: 2px 2px 7px grey;
-			color: $textLogo;
-		}
-
-		button:hover {
-			@include buttonColor;
-		}
-
-		.button__choosen {
-			@include buttonColor;
-		}
-
-		.button__choosen:hover {
-			@include buttonColorHover;
 		}
 
 		.price {
@@ -389,6 +365,20 @@ a {
 			font-size: 2.4rem;
 		}
 	}
+}
+
+//BUTTON STYLE
+.button {
+	@include buttonStyle;
+	color: $textLogo;
+}
+.button__choosen {
+	@include buttonColor;
+}
+
+.button:hover, .button__choosen:hover {
+	@include buttonColor;
+	@include buttonColorHover;
 }
 
 //CONTACT
@@ -440,13 +430,13 @@ a {
 	}
 
 	&__form-label {
-		margin-bottom: 0.5em;
+		margin-top: 0.5em;
 		text-transform: uppercase;
 	}
 
 	&__form-input,
 	&__form-textarea {
-		margin-bottom: 2em;
+		margin-bottom: .5em;
 		padding: 0.6em 0;
 		font-size: 1.2rem;
 		background-color: transparent;
@@ -456,11 +446,6 @@ a {
 		color: $textWhite;
 	}
 
-	&__form-input:focus,
-	&__form-textarea:focus {
-		outline: transparent;
-	}
-
 	&__form-textarea {
 		max-width: 100%;
 		min-width: 100%;
@@ -468,17 +453,41 @@ a {
 		min-height: 150px;
 	}
 
-	&__form-btn {
+	.button__choosen {
 		align-self: flex-end;
 		width: 100%;
 		max-width: 200px;
-		@include buttonColor;
-		@include buttonStyle;
 	}
+}
 
-	&__form-btn:hover {
-		@include buttonColorHover;
-	}
+//ERROR MSG
+
+.error {
+	border-bottom: 2px solid rgb(199, 63, 29);
+}
+.error-text {
+	margin: .5em 0;
+	color: rgb(199, 63, 29);
+	visibility: hidden;
+}
+
+.visible {
+	visibility: visible;
+}
+
+.popup {
+	background-color:$footerBGC;
+	box-shadow: 2px 1px 5px $footerBGC;
+	color: $textLogo;
+	margin: 2em 0 0;
+	padding: 1em;
+	border-radius: 6px;
+	text-align: center;
+	display: none;
+}
+
+.show-popup {
+	display: block;
 }
 
 //FOOTER
