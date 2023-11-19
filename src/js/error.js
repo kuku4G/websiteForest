@@ -1,4 +1,3 @@
-// const error = document.querySelector('.error');
 const nameInput = document.querySelector('#name');
 const emailInput = document.querySelector('#email');
 const textareaInput = document.querySelector('#msg');
