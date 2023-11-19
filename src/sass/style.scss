@@ -221,6 +221,10 @@ a {
 			color: #fff;
 		}
 	}
+	
+	.part__boxes {
+		width: 80%;
+	}
 }
 //HERO
 
@@ -512,7 +516,7 @@ a {
 .part__boxes {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-evenly;
+	justify-content: space-around;
 }
 
 .part {
@@ -607,6 +611,6 @@ a {
 
 	.contact__box {
 		margin-bottom: 8em;
-		height: 80%;
+		height: 58vh;
 	}
 }
